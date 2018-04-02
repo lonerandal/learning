@@ -11,6 +11,9 @@ def make_scorecard(formular,woe,basescore=600.0,base_odds=50.0/1.0,pdo=50.0):
     pdo = float(50)
     #计算所需要的参数
     """
+
+    # socre = A - Blog(Odds)
+    # Odds = p/1-p,p为违约概率
     a = formular[formular[u"参数"] == "Intercept"].ix[0,u"估计值"]
     formular = formular.iloc[1:,:]
     n = float(len(formular))
